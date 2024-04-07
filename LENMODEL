@@ -1,0 +1,91 @@
+SELECT * FROM [dbo].[tblEmployee_4];
+
+SELECT ASCII('A');
+
+SELECT ASCII('ABC');
+
+SELECT ASCII('BC');
+
+SELECT ASCII('A');
+
+SELECT CHAR(65);
+
+DECLARE @Start INT 
+SET @Start = 65
+WHILE(@Start < 91)
+BEGIN 
+	PRINT CHAR(@Start)
+	SET @Start = @Start + 1;
+END
+
+SELECT ASCII('a');
+
+DECLARE @Begin INT
+SET @Begin = 97
+WHILE(@Begin < 123)
+BEGIN
+	PRINT CHAR(@Begin)
+	SET @Begin = @Begin + 1
+END
+
+SELECT ASCII(0);
+
+DECLARE @StartPoint INT
+SET @StartPoint = 48
+WHILE(@StartPoint<58)
+BEGIN
+	PRINT CHAR(@StartPoint)
+	SET @StartPoint = @StartPoint + 1;
+END
+
+SELECT '      Welcome';
+
+SELECT LTRIM('     Welcome');
+
+SELECT * FROM [dbo].[tblEmployee_4];
+
+SELECT * FROM [dbo].[tblEmployee_3];
+
+SELECT * FROM [dbo].[tblEmployee_2];
+
+SELECT * FROM [dbo].[tblPerson1];
+
+SELECT * FROM [dbo].[tblEmployee_2];
+
+TRUNCATE TABLE [dbo].[tblEmployee_2];
+
+SELECT * FROM [dbo].[tblEmployee_2];
+
+INSERT INTO [dbo].[tblEmployee_2] VALUES(1,'    Ram','Galet','Steve');
+INSERT INTO [dbo].[tblEmployee_2] VALUES(2,' Pramod','Vargeese','RaviChand');
+INSERT INTO [dbo].[tblEmployee_2] VALUES(3,'  Rakesh','Ronald','Sanderson');
+INSERT INTO [dbo].[tblEmployee_2] VALUES(4,' Rajesh','Mark','Fedrick');
+INSERT INTO [dbo].[tblEmployee_2] VALUES(5,'        Tarun','Thunder','Rock');
+INSERT INTO [dbo].[tblEmployee_2] VALUES(6,' Kishore','','Gayle');
+INSERT INTO [dbo].[tblEmployee_2] VALUES(7,'       Sharon','','Angeline');
+INSERT INTO [dbo].[tblEmployee_2] VALUES(8,'      Rathod','','Pramod');
+INSERT INTO [dbo].[tblEmployee_2] VALUES(9,'     Rajendran','Grali','Mars');
+INSERT INTO [dbo].[tblEmployee_2] VALUES(10,'      Virat','Kohli','Dhoni');
+
+SELECT * FROM [dbo].[tblEmployee_2];
+
+SELECT LTRIM(FirstName) AS FirstName,MiddleName,LastName FROM [dbo].[tblEmployee_2];
+
+SELECT RTRIM('   Morning      ');
+
+SELECT LTRIM(FirstName) AS FirstName,MiddleName,LastName
+, RTRIM(LTRIM(FirstName)) + ' ' + MiddleName + ' ' + LastName AS FullName
+FROM [dbo].[tblEmployee_2];
+
+SELECT UPPER(LTRIM(FirstName)) AS FirstName,MiddleName,LOWER(LastName) AS LastName
+, RTRIM(LTRIM(FirstName)) + ' ' + MiddleName + ' ' + LastName AS FullName
+FROM [dbo].[tblEmployee_2];
+
+SELECT REVERSE(UPPER(LTRIM(FirstName))) AS FirstName,MiddleName,LOWER(LastName) AS LastName
+, RTRIM(LTRIM(FirstName)) + ' ' + MiddleName + ' ' + LastName AS FullName
+FROM [dbo].[tblEmployee_2];
+
+SELECT LTRIM(FirstName) FROM [dbo].[tblEmployee_2];
+
+SELECT LTRIM(FirstName) AS FirstName, LEN(LTRIM(FirstName)) AS LengthOfFirstName FROM [dbo].[tblEmployee_2];
+
